@@ -1,0 +1,18 @@
+.page {
+    width: 100%;
+    margin: auto;
+
+    &__chapter {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+}
+
+
+.separationLine {
+    width: 90%;
+    // margin: auto;
+    border: solid white 2px;
+    border-radius: 15px;
+}

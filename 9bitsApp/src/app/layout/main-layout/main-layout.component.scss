@@ -1,0 +1,9 @@
+.horizontalView {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__displayContent {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
