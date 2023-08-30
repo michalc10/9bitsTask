@@ -1,3 +1,44 @@
 .sideBarContent{
-    height: 100vh;
+    width: 100%;
 }
+
+.horizontalView {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__displayContent {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+
+.circle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: solid 1px #1464F4;
+    background-color: #1464F4;
+    color: #fafafa;
+    text-align: center;
+    display: block;
+    margin-left: -15px;
+  }
+
+  .list-iteam{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__text{
+        margin-left: 50px;
+    }
+  }
+  a{
+    margin:0  5px 5px 0;
+    background-color: whitesmoke
+  }

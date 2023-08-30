@@ -1,18 +1,68 @@
+$background-light: white;
+
 .page {
-    width: 100%;
-    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
     &__chapter {
+        justify-self: stretch;
         display: flex;
         flex-direction: column;
         margin: 10px;
+
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 }
 
 
 .separationLine {
-    width: 90%;
-    // margin: auto;
-    border: solid white 2px;
-    border-radius: 15px;
+    margin-bottom: 15px;
+    border: solid $background-light 2px;
+    border-radius: 45px;
+
+}
+
+.separator-vertical {
+    border-right: 4px solid $background-light;
+}
+
+.red-star {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    display: inline-block;
+    clip-path: polygon(50% 0%,
+            61% 38%,
+            100% 38%,
+            68% 61%,
+            79% 100%,
+            50% 76%,
+            21% 100%,
+            32% 61%,
+            0% 38%,
+            39% 38%);
+
+    &__field {
+        position: absolute;
+        top: 3px;
+        right: -7px;
+
+    }
+}
+
+
+.info-form-field {
+    width: 94%;
+}
+
+.space-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

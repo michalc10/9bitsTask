@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
 
 const routes: Routes = [
   {
     path:'',
-    component:MainLayoutComponent,
+    component:SidebarComponent,
     loadChildren:() => import('./modulles/promotion/promotion.module').then(m => m.PromotionModule)
   }
 ];

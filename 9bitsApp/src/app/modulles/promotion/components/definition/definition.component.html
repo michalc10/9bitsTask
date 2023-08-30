@@ -1,17 +1,177 @@
 <div class="page">
 
-    <div class="page__chapter">
-        <h1>Description</h1>
-        <div class="separationLine"></div>
-        <mat-form-field class="example-full-width">
-            <mat-label>Favorite food</mat-label>
-            <input matInput placeholder="Ex. Pizza" value="Sushi">
-        </mat-form-field>
+    <div class="separator-vertical">
+        <div class="page__chapter">
+            <div class="page__header info-form-field">
+                <h1>Description</h1>
+                <small>
+                    <span class="red-star"></span>
+                    is requierd
+                </small>
+            </div>
+            <div class="separationLine"></div>
 
-        <mat-form-field class="example-full-width">
-            <mat-label>Leave a comment</mat-label>
-            <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-        </mat-form-field>
+            <div class="">
+                <mat-form-field class="info-form-field">
+                    <!--matBadge="&#8203;" matBadgeColor="warn" matBadgeSize="small"   -->
+                    <mat-label>Marketing name</mat-label>
+
+                    <span class="red-star red-star__field"></span>
+                    <input matInput placeholder="9bits" value="">
+                </mat-form-field>
+                <mat-icon>info</mat-icon>
+            </div>
+
+            <div class="">
+                <mat-form-field class="info-form-field">
+                    <mat-label>Technical name</mat-label>
+                    <input matInput placeholder="..." value="">
+                </mat-form-field>
+                <mat-icon>info</mat-icon>
+            </div>
+
+
+            <div class="">
+                <mat-form-field class="info-form-field">
+                    <mat-label>Description</mat-label>
+                    <textarea matInput placeholder="..."></textarea>
+                </mat-form-field>
+                <mat-icon>info</mat-icon>
+            </div>
+        </div>
+
+        <div class="page__chapter ">
+            <h1>Catalog promotion tutorial:</h1>
+            <div class="separationLine"></div>
+
+            <p class="info-form-field">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat
+                nulla pariatur.
+            </p>
+            <p class="info-form-field">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat
+                nulla pariatur.
+            </p>
+            <p class="info-form-field">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat
+                nulla pariatur.
+            </p>
+        </div>
+
     </div>
 
+
+    <div class="">
+        <div class="page__chapter">
+            <div class="page__header info-form-field">
+                <h1>Conditions</h1>
+                <small>
+                    <span class="red-star"></span>
+                    is requierd
+                </small>
+            </div>
+            <div class="separationLine"></div>
+
+            <div class="">
+                <mat-form-field class="info-form-field">
+                    <mat-label>Favorite food</mat-label>
+                    <span class="red-star red-star__field"></span>
+                    <mat-select>
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-icon>info</mat-icon>
+            </div>
+
+            <div class="">
+                <mat-form-field class="info-form-field">
+                    <mat-label>Type</mat-label>
+                    <span class="red-star red-star__field"></span>
+                    <mat-select>
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-icon>info</mat-icon>
+            </div>
+
+
+        </div>
+
+        <div class="page__chapter">
+            <div class="page__header">
+                <h4>Benefit amount</h4>
+                <mat-icon>info</mat-icon>
+            </div>
+
+            <div class="separationLine"></div>
+
+            <div class="">
+                <mat-form-field class="info-form-field" style="width: 45%; margin-right: 5%;">
+                    <mat-label>Start Date</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <span class="red-star red-star__field"></span>
+                </mat-form-field>
+
+                <mat-form-field class="info-form-field" style="width: 45%;">
+                    <mat-label>Finish date</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-icon>info</mat-icon>
+
+            </div>
+
+            <div class="space-between">
+                <div class="info-form-field">
+                    <mat-radio-group class=" " [(ngModel)]="labelPosition">
+                        <mat-radio-button style="width: 45%; margin-right: 5%;" value="bussiness conditions">Bussiness
+                            conditions</mat-radio-button>
+                        <mat-radio-button style="width: 45%;" value="base price 100%">Base price 100%</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <mat-icon>info</mat-icon>
+            </div>
+
+
+            <div class="space-between">
+                <mat-checkbox class="info-form-field" [(ngModel)]="checked">Checked</mat-checkbox>
+                <mat-icon style="left: -10%;">info</mat-icon>
+            </div>
+
+            <div class="space-between">
+                <mat-checkbox class="info-form-field" [(ngModel)]="indeterminate">Indeterminate</mat-checkbox>
+                <mat-icon>info</mat-icon>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+<div id="mainDiv">
+    <div id="borderLeft"></div>
 </div>
