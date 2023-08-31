@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PromotionRoutingModule } from './promotion-routing.module';
 import { DefinitionComponent } from './components/definition/definition.component';
+import { SharedModule } from '../shared/shared.module';
 import { SummaryComponent } from './components/summary/summary.component';
 import { ReactiveFormsModule } from '@angular/forms'
 import { MatInputModule } from '@angular/material/input';
@@ -32,6 +33,7 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     PromotionRoutingModule,
     ReactiveFormsModule,
+    SharedModule,
     MatInputModule,
     MatSelectModule,
     MatDatepickerModule,

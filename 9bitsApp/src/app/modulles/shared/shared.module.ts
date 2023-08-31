@@ -12,6 +12,7 @@ import { LoremIpsumComponent } from './components/lorem-ipsum/lorem-ipsum.compon
   imports: [
     CommonModule,
     SharedRoutingModule
-  ]
+  ],
+  exports:[LoremIpsumComponent]
 })
 export class SharedModule { }

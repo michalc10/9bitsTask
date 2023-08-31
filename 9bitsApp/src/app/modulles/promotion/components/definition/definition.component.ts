@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { MatDatepicker, MatDatepickerInputEvent } from '@angular/material/datepicker';
-import { LocalStorageService } from 'src/app/modulles/shared/services/local-storage.service';
 
 
 @Component({
@@ -24,7 +22,7 @@ export class DefinitionComponent implements OnInit {
   definitionFormGroup: FormGroup;
 
 
-  constructor(private localStorageService: LocalStorageService) {
+  constructor() {
     this.definitionFormGroup = new FormGroup({
       marketingName: new FormControl('', [Validators.required]),
       technicalName: new FormControl(''),
@@ -50,7 +48,7 @@ export class DefinitionComponent implements OnInit {
 
 
   saveTextToLocalStorage(key: string, value: string) {
-    this.localStorageService.saveData(key, value)
+    localStorage.setItem(key, value);
 
   }
 
