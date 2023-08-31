@@ -7,9 +7,16 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
 
+  selectedCircle: number | null = 1;
+
+
   reason = '';
 
   close(reason: string) { 
   }
 
+
+  selectCircle(circleNumber: number): void {
+    this.selectedCircle = circleNumber;
+  }
 }

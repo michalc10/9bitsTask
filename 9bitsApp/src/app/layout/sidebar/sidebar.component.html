@@ -3,57 +3,57 @@
         <mat-sidenav-container>
             <mat-sidenav #sidenav opened mode="side" style="width: auto; ">
                 <mat-nav-list style="margin-right: 5px;">
-                    <a mat-list-item [routerLink]="'/definition'" style="margin-right: -5px;">
+                    <a mat-list-item [routerLink]="'/definition'" (click)="selectCircle(1)" style="margin-right: -5px;">
                         <div class="list-iteam">
-                            <div class="circle">1</div> 
+                            <div class="circle" [ngClass]="{'selected': selectedCircle === 1}">1</div>
                             <div class="list-iteam__text"> DEFINITION</div>
                         </div>
                     </a>
-                    <a mat-list-item [routerLink]="'/lorem-ipsum'">
+                    <a mat-list-item [routerLink]="'/lorem-ipsum'" (click)="selectCircle(2)">
                             <div class="list-iteam">
-                                <div class="circle">3</div> 
+                                <div class="circle" [ngClass]="{'selected': selectedCircle === 2}">2</div>
                                 <div class="list-iteam__text"> CHOOSEN PRODUCTS</div>
                             </div>
                     </a>
-                    <a mat-list-item [routerLink]="'/lorem-ipsum'">
+                    <a mat-list-item [routerLink]="'/lorem-ipsum'" (click)="selectCircle(3)">
                         <div class="list-iteam">
-                            <div class="circle">3</div> 
+                            <div class="circle" [ngClass]="{'selected': selectedCircle === 3}">3</div> 
                             <div class="list-iteam__text"> EXCLUDE PRODUCTS</div>
                         </div>
                     </a>
-                    <a mat-list-item [routerLink]="'/lorem-ipsum'">
+                    <a mat-list-item [routerLink]="'/lorem-ipsum'" (click)="selectCircle(4)">
                         <div class="list-iteam">
-                            <div class="circle">4</div> 
+                            <div class="circle" [ngClass]="{'selected': selectedCircle === 4}">4</div> 
                             <div class="list-iteam__text"> BONUM PRODUCTS</div>
                         </div>
                     </a>
-                    <a mat-list-item [routerLink]="'/lorem-ipsum'">
+                    <a mat-list-item [routerLink]="'/lorem-ipsum'" (click)="selectCircle(5)">
                         <div class="list-iteam">
-                            <div class="circle">5</div> 
+                            <div class="circle" [ngClass]="{'selected': selectedCircle === 5}">5</div> 
                             <div class="list-iteam__text"> PRODUCTS LIMITS</div>
                         </div>
                     </a>
-                    <a mat-list-item [routerLink]="'/lorem-ipsum'">
+                    <a mat-list-item [routerLink]="'/lorem-ipsum'" (click)="selectCircle(6)">
                         <div class="list-iteam">
-                            <div class="circle">6</div> 
+                            <div class="circle" [ngClass]="{'selected': selectedCircle === 6}">6</div> 
                             <div class="list-iteam__text"> CHOOSEN CLIENTS</div>
                         </div>
                     </a>
-                    <a mat-list-item [routerLink]="'/lorem-ipsum'">
+                    <a mat-list-item [routerLink]="'/lorem-ipsum'" (click)="selectCircle(7)">
                         <div class="list-iteam">
-                            <div class="circle">7</div> 
+                            <div class="circle" [ngClass]="{'selected': selectedCircle === 7}">7</div> 
                             <div class="list-iteam__text"> EXCLUDE CLIENTS</div>
                         </div>
                     </a>
-                    <a mat-list-item [routerLink]="'/lorem-ipsum'">
+                    <a mat-list-item [routerLink]="'/lorem-ipsum'" (click)="selectCircle(8)">
                         <div class="list-iteam">
-                            <div class="circle">8</div> 
+                            <div class="circle" [ngClass]="{'selected': selectedCircle === 8}" >8</div> 
                             <div class="list-iteam__text"> CLIENTS LIMITS</div>
                         </div>
                     </a>
-                    <a mat-list-item class=" " [routerLink]="'/summary'">
+                    <a mat-list-item class=" " [routerLink]="'/summary'" (click)="selectCircle(9)">
                         <div class="list-iteam">
-                            <div class="circle">9</div> 
+                            <div class="circle" [ngClass]="{'selected': selectedCircle === 9}">9</div> 
                             <div class="list-iteam__text"> SUMMARY</div>
                         </div>
                     </a>
