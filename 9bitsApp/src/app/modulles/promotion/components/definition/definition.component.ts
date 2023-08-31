@@ -11,6 +11,8 @@ import { LocalStorageService } from 'src/app/modulles/shared/services/local-stor
 })
 export class DefinitionComponent implements OnInit {
 
+  loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et  dolore  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  loremIpsumShort= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et  dolore  magna aliqua."
   foods: any[] = [
     { value: 'steak-0', viewValue: 'Steak' },
     { value: 'pizza-1', viewValue: 'Pizza' },
@@ -21,12 +23,9 @@ export class DefinitionComponent implements OnInit {
   indeterminate = false
   definitionFormGroup: FormGroup;
 
-  // startDatePicker: MatDatepicker<any>;
-  // finishDatePicker: MatDatepicker<any>;
 
-
-  constructor(private localStorageService: LocalStorageService) { 
-    this. definitionFormGroup = new FormGroup({
+  constructor(private localStorageService: LocalStorageService) {
+    this.definitionFormGroup = new FormGroup({
       marketingName: new FormControl('', [Validators.required]),
       technicalName: new FormControl(''),
       description: new FormControl(''),
@@ -40,7 +39,7 @@ export class DefinitionComponent implements OnInit {
     })
   }
 
-  ngOnInit() { 
+  ngOnInit() {
     Object.keys(this.definitionFormGroup.controls).forEach(controlName => {
       const savedValue = localStorage.getItem(controlName);
       if (savedValue) {
@@ -49,8 +48,8 @@ export class DefinitionComponent implements OnInit {
     });
   }
 
-  
-  saveTextToLocalStorage(key:string, value:string){
+
+  saveTextToLocalStorage(key: string, value: string) {
     this.localStorageService.saveData(key, value)
 
   }

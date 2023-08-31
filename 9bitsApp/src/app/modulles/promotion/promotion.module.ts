@@ -16,12 +16,17 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatIconModule } from '@angular/material/icon'
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { SummaryDialogComponent } from './components/summary-dialog/summary-dialog.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     DefinitionComponent,
-    SummaryComponent
+    SummaryComponent,
+    SummaryDialogComponent
   ],
   imports: [
     CommonModule,
@@ -37,9 +42,12 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatCheckboxModule,
     MatBadgeModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDialogModule,
+    MatTableModule,
+    MatSnackBarModule,
+    MatButtonModule
   ], providers: [
-    // Dodaj dostawcę MAT_DATE_LOCALE tutaj
     { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }
   ]
 })

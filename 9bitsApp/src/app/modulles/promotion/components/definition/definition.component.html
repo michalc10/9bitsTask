@@ -19,7 +19,7 @@
                     <input #marketingName matInput placeholder="9bits" value="" formControlName="marketingName"
                         (blur)="saveTextToLocalStorage('marketingName',marketingName.value)">
                 </mat-form-field>
-                <mat-icon>info</mat-icon>
+                <mat-icon matTooltip="{{loremIpsumShort}}">info</mat-icon>
             </div>
 
             <div class="">
@@ -28,7 +28,7 @@
                     <input #technicalName matInput placeholder="..." value="" formControlName="technicalName"
                         (blur)="saveTextToLocalStorage('technicalName',technicalName.value)">
                 </mat-form-field>
-                <mat-icon>info</mat-icon>
+                <mat-icon matTooltip="{{loremIpsumShort}}">info</mat-icon>
             </div>
 
 
@@ -38,7 +38,7 @@
                     <textarea #description matInput placeholder="..." formControlName="description"
                         (blur)="saveTextToLocalStorage('description',description.value)"></textarea>
                 </mat-form-field>
-                <mat-icon>info</mat-icon>
+                <mat-icon matTooltip="{{loremIpsumShort}}">info</mat-icon>
             </div>
         </div>
 
@@ -47,28 +47,13 @@
             <div class="separationLine"></div>
 
             <p class="info-form-field">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat
-                nulla pariatur.
+                {{loremIpsum}}
             </p>
             <p class="info-form-field">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat
-                nulla pariatur.
+                {{loremIpsum}}
             </p>
             <p class="info-form-field">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat
-                nulla pariatur.
+                {{loremIpsum}}
             </p>
         </div>
 
@@ -97,7 +82,7 @@
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
-                <mat-icon>info</mat-icon>
+                <mat-icon matTooltip="{{loremIpsumShort}}">info</mat-icon>
             </div>
 
             <div class="">
@@ -111,7 +96,7 @@
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
-                <mat-icon>info</mat-icon>
+                <mat-icon matTooltip="{{loremIpsumShort}}">info</mat-icon>
             </div>
 
 
@@ -120,7 +105,7 @@
         <div class="page__chapter">
             <div class="page__header">
                 <h4>Benefit amount</h4>
-                <mat-icon>info</mat-icon>
+                <mat-icon matTooltip="{{loremIpsumShort}}">info</mat-icon>
             </div>
 
             <div class="separationLine"></div>
@@ -144,7 +129,7 @@
                     <mat-datepicker-toggle matIconSuffix [for]="finishDatePicker"></mat-datepicker-toggle>
                     <mat-datepicker #finishDatePicker></mat-datepicker>
                 </mat-form-field>
-                <mat-icon>info</mat-icon>
+                <mat-icon matTooltip="{{loremIpsumShort}}">info</mat-icon>
 
             </div>
             <div class="space-between">
@@ -157,26 +142,24 @@
                     </mat-radio-group>
                 </div>
 
-                <mat-icon>info</mat-icon>
+                <mat-icon matTooltip="{{loremIpsumShort}}">info</mat-icon>
             </div>
 
             <div class="space-between">
                 <mat-checkbox class="info-form-field" formControlName="coectedWithOtherPromotions"
                     (change)="saveTextToLocalStorage('coectedWithOtherPromotions',$event.checked.toString())">Connect
                     with other promotions</mat-checkbox>
-                <mat-icon style="left: -10%;">info</mat-icon>
+                <mat-icon matTooltip="{{loremIpsumShort}}" style="left: -10%;">info</mat-icon>
             </div>
 
             <div class="space-between">
                 <mat-checkbox class="info-form-field" formControlName="backPromotion"
-                (change)="saveTextToLocalStorage('backPromotion',$event.checked.toString())">Back promotion</mat-checkbox>
-                <mat-icon>info</mat-icon>
+                    (change)="saveTextToLocalStorage('backPromotion',$event.checked.toString())">Back
+                    promotion</mat-checkbox>
+                <mat-icon matTooltip="{{loremIpsumShort}}">info</mat-icon>
             </div>
 
         </div>
 
     </div>
 </form>
-
-
-
